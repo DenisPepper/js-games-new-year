@@ -7,7 +7,7 @@ export class Player {
     this.height = 105;
     this.x = 0;
     this.y = 0;
-    this.frameX = 3;
+    this.frameX = 0;
     this.frameY = 0;
     this.speed = 0;
     this.velocityY = 0;
@@ -56,8 +56,10 @@ export class Player {
 
     if (!this.onGround()) {
       this.velocityY -= this.gravity;
+      this.frameX = 1;
     } else {
       this.velocityY = 0;
+      this.frameX = 0;
     }
     if (this.y > this.playgroundHeight - this.height)
       this.y = this.playgroundHeight - this.height;
