@@ -42,6 +42,8 @@ export class Enemy {
       this.frameTimer += time;
     }
     this.x -= this.speed;
-    if (this.x < 0 - this.width) this.outOfScreen = true;
+    if (this.x < 0 - this.width) {
+      this.outOfScreen = true;
+    }
   }
 }

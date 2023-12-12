@@ -23,6 +23,14 @@ let enemyTimer = 0;
 let enemyInterval = 1000;
 let randomEnemyInterval = Math.random() * 1500 + 1000;
 
+let score = 0;
+
+function drawScore() {
+  context.fillStyle = 'black';
+  context.font = '40px Helvetica';
+  context.fillText(`Шарики: ${score}`, 20, 50);
+}
+
 function addEnemy(enemyDeltaTime) {
   if (enemyTimer > enemyInterval + randomEnemyInterval) {
     enemies.push(new Enemy(canvas.width, canvas.height, enemyImage));
@@ -32,9 +40,12 @@ function addEnemy(enemyDeltaTime) {
   }
   enemies.forEach((enemy) => {
     enemy.draw(context);
-    enemy.update(enemyDeltaTime);
+    enemy.update(enemyDeltaTime, score);
   });
-  enemies = enemies.filter((enemy) => !enemy.outOfScreen);
+  enemies = enemies.filter((enemy) => {
+    if (enemy.outOfScreen) score += 1;
+    return !enemy.outOfScreen;
+  });
 }
 
 function animate(timeStamp) {
@@ -49,8 +60,9 @@ function animate(timeStamp) {
   player.draw(context);
   player.update(actions);
 
-  addEnemy(enemyDeltaTime);
+  drawScore();
 
+  addEnemy(enemyDeltaTime);
   requestAnimationFrame(animate);
 }
 
