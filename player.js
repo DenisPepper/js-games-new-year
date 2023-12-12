@@ -49,8 +49,8 @@ export class Player {
 
   update(actions, enemies) {
     enemies.forEach((enemy) => {
-      const dx = enemy.x - this.x;
-      const dy = enemy.y - this.y;
+      const dx = enemy.x + enemy.width / 2 - (this.x + this.width / 2);
+      const dy = enemy.y + enemy.height / 2 - (this.y + this.height / 2);
       const distance = Math.sqrt(dx * dx + dy * dy);
       if (distance < enemy.width / 2 + this.width / 2) {
         this.gameOver = true;
