@@ -20,7 +20,7 @@ const background = new Background(canvas.width, canvas.height, bgImage);
 let enemies = [];
 let enemyLastTime = 0;
 let enemyTimer = 0;
-let enemyInterval = 1000;
+let enemyInterval = 2000;
 let randomEnemyInterval = Math.random() * 1500 + 1000;
 
 let score = 0;
@@ -58,12 +58,13 @@ function animate(timeStamp) {
   background.update();
 
   player.draw(context);
-  player.update(actions);
+  player.update(actions, enemies);
 
   drawScore();
 
   addEnemy(enemyDeltaTime);
-  requestAnimationFrame(animate);
+
+  if (!player.gameOver) requestAnimationFrame(animate);
 }
 
 window.addEventListener('load', () => {

@@ -3,7 +3,7 @@ export class Player {
     this.image = image;
     this.playgroundWidth = playgroundWidth;
     this.playgroundHeight = playgroundHeight;
-    this.width = 114;
+    this.width = 112;
     this.height = 105;
     this.x = 0;
     this.y = 0;
@@ -12,6 +12,7 @@ export class Player {
     this.speed = 0;
     this.velocityY = 0;
     this.gravity = 1;
+    this.gameOver = false;
     this.toStart();
   }
 
@@ -29,13 +30,33 @@ export class Player {
       this.width,
       this.height
     );
+
+    context.strokeStyle = 'black';
+    context.beginPath();
+    context.arc(
+      this.x + this.width / 2,
+      this.y + this.height / 2,
+      this.width / 2,
+      0,
+      360
+    );
+    context.stroke();
   }
 
   toStart() {
     this.y = this.playgroundHeight - this.height;
   }
 
-  update(actions) {
+  update(actions, enemies) {
+    enemies.forEach((enemy) => {
+      const dx = enemy.x - this.x;
+      const dy = enemy.y - this.y;
+      const distance = Math.sqrt(dx * dx + dy * dy);
+      if (distance < enemy.width / 2 + this.width / 2) {
+        this.gameOver = true;
+      }
+    });
+
     this.x += this.speed;
     if (actions.keys.has('ArrowUp') && this.onGround()) {
       this.velocityY += 30;

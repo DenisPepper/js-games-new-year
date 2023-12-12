@@ -8,7 +8,7 @@ export class Enemy {
     this.x = this.playgroundWidth;
     this.y = this.playgroundHeight - this.height;
     this.frameX = 0;
-    this.speed = 8;
+    this.speed = 5;
     this.maxFrame = 5;
     this.fps = 20;
     this.frameTimer = 0;
@@ -28,6 +28,17 @@ export class Enemy {
       this.width,
       this.height
     );
+    
+    context.strokeStyle = 'black';
+    context.beginPath();
+    context.arc(
+      this.x + this.width / 2,
+      this.y + this.height / 2,
+      this.width / 2,
+      0,
+      360
+    );
+    context.stroke();
   }
 
   update(time) {
