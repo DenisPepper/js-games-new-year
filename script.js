@@ -17,11 +17,11 @@ const actions = new ActionsHandler();
 const player = new Player(canvas.width, canvas.height, playerImage);
 const background = new Background(canvas.width, canvas.height, bgImage);
 
-const enemies = [];
+let enemies = [];
 let enemyLastTime = 0;
 let enemyTimer = 0;
 let enemyInterval = 1000;
-let randomEnemyInterval = Math.random() * 1000 + 500;
+let randomEnemyInterval = Math.random() * 1500 + 1000;
 
 function addEnemy(enemyDeltaTime) {
   if (enemyTimer > enemyInterval + randomEnemyInterval) {
@@ -32,8 +32,9 @@ function addEnemy(enemyDeltaTime) {
   }
   enemies.forEach((enemy) => {
     enemy.draw(context);
-    enemy.update();
+    enemy.update(enemyDeltaTime);
   });
+  enemies = enemies.filter((enemy) => !enemy.outOfScreen);
 }
 
 function animate(timeStamp) {
