@@ -130,7 +130,7 @@ a.start-button {
 }
 
 .controls:hover {
-  transform: rotate(15deg);
+  transform: rotate(25deg);
 }
 
 @media screen and (min-width: 700px) {
