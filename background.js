@@ -3,8 +3,8 @@ export class Background {
     this.image = image;
     this.playgroundWidth = playgroundWidth;
     this.playgroundHeight = playgroundHeight;
-    this.width = 1588;
-    this.height = 893;
+    this.width = 1920;
+    this.height = 700;
     this.x = 0;
     this.y = 0;
     this.speed = 1;

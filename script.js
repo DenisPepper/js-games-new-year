@@ -28,7 +28,7 @@ let score = 0;
 function drawScore() {
   context.fillStyle = 'black';
   context.font = '40px Helvetica';
-  context.fillText(`Шарики: ${score}`, 20, 50);
+  context.fillText(`Очки: ${score}`, 20, 50);
 }
 
 function addEnemy(enemyDeltaTime) {
