@@ -17,6 +17,7 @@ const enemyImage = document.querySelector('.enemy-image');
 const mainTitle = document.querySelector('.main-title');
 const description = document.querySelector('.description');
 const startButton = document.querySelector('.start-button');
+const controls = document.querySelector('.controls');
 
 const actions = new ActionsHandler();
 const player = new Player(canvas.width, canvas.height, playerImage);
@@ -100,6 +101,7 @@ startButton.addEventListener('click', () => {
   mainTitle.classList.add('hide');
   description.classList.add('hide');
   startButton.classList.add('hide');
+  controls.classList.add('hide');
   canvas.classList.remove('hide');
   //document.body.classList.remove('with-background');
   animate(enemyLastTime);

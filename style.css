@@ -87,9 +87,14 @@ a.start-button {
 }
 
 .description-actions {
-  font-size: x-small;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
   text-align: initial;
   color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
 }
 
 .start-button {
@@ -115,6 +120,17 @@ a.start-button {
 
 .hide {
   display: none;
+}
+
+.controls {
+  max-width: 5%;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+.controls:hover {
+  transform: rotate(15deg);
 }
 
 @media screen and (min-width: 700px) {
