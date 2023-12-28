@@ -94,6 +94,6 @@ startButton.addEventListener('click', () => {
   description.classList.add('hide');
   startButton.classList.add('hide');
   canvas.classList.remove('hide');
-  document.body.classList.remove('with-background');
+  //document.body.classList.remove('with-background');
   animate(enemyLastTime);
 });
