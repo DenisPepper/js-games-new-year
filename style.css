@@ -136,7 +136,7 @@ a.start-button {
 
 .player {
   position: absolute;
-  top: 44%;
+  top: 40%;
 }
 
 @media screen and (min-width: 700px) {
