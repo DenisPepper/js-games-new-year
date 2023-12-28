@@ -80,10 +80,11 @@ a.start-button {
 .game-hero {
   color: #5aaf8a;
   font-size: 1.3rem;
+  font-weight: bold;
 }
 
 .game-hero--target {
-  color: deeppink;
+  color: #cd5b5b;
 }
 
 .description-actions {
