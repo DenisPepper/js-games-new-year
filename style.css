@@ -40,3 +40,24 @@ h1 {
   top: 16%;
   left: 8%;
 }
+
+@media only screen and (max-width: 900px) {
+  /* for 10 inches tablet screens */
+  body > * {
+    display: none;
+  }
+
+  body::before {
+    content: 'перейдите на устройство с шириной экрана 900 px';
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    font-size: 3rem;
+    background: rgba(255, 255, 0, 0.9); /* Semi-transparent yellow */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+}
