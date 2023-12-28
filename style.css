@@ -31,10 +31,26 @@ body {
 .year {
   color: goldenrod;
   font-size: 2rem;
+  transform: rotate(5deg);
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  25% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  75% {
+    transform: rotate(0deg);
+  }
 }
 
 .year span {
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
 .description {
