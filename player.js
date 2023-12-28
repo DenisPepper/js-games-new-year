@@ -48,7 +48,7 @@ export class Player {
     if (actions.keys.has('ArrowUp') && this.onGround()) {
       this.velocityY += 22;
     } else if (actions.keys.has('SwipeUp') && this.onGround()) {
-      this.velocityY += 28;
+      this.velocityY += 30;
     } else if (actions.keys.has('ArrowRight')) {
       this.speed = 5;
     } else if (actions.keys.has('ArrowLeft')) {
