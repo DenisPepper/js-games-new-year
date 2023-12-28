@@ -5,19 +5,31 @@
 }
 
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
 }
 
-h1 {
-  width: 90%;
-  position: absolute;
+.main-title {
+  color: aliceblue;
+  padding: 10px;
   text-align: center;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: cornflowerblue;
-  z-index: 10;
-  font-size: 90%;
+}
+
+.description {
+  color: aliceblue;
+  padding: 10px;
+  text-align: center;
+}
+
+.start-button {
+  width: 50%;
+  padding: 10px;
+  font-weight: bold;
 }
 
 .canvas {
@@ -30,6 +42,7 @@ h1 {
   transform: translate(-50%, -50%);
 }
 
+.canvas,
 .player-image,
 .background-image,
 .enemy-image {
