@@ -43,9 +43,6 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.canvas,
-.player-image,
-.background-image,
-.enemy-image {
+.hide {
   display: none;
 }

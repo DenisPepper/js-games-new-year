@@ -4,6 +4,7 @@ import { Enemy } from './enemy.js';
 import { Player } from './player.js';
 import { PLAYGROUND_WIDTH, PLAYGROUND_HEIGHT } from './settings.js';
 
+let PAGE_IS_LOAD = false;
 const canvas = document.querySelector('.canvas');
 canvas.width = PLAYGROUND_WIDTH;
 canvas.height = PLAYGROUND_HEIGHT;
@@ -12,6 +13,9 @@ const context = canvas.getContext('2d');
 const playerImage = document.querySelector('.player-image');
 const bgImage = document.querySelector('.background-image');
 const enemyImage = document.querySelector('.enemy-image');
+const mainTitle = document.querySelector('.main-title');
+const description = document.querySelector('.description');
+const startButton = document.querySelector('.start-button');
 
 const actions = new ActionsHandler();
 const player = new Player(canvas.width, canvas.height, playerImage);
@@ -64,15 +68,31 @@ function animate(timeStamp) {
 
   addEnemy(enemyDeltaTime);
 
-  if (!player.gameOver) requestAnimationFrame(animate);
+  if (player.gameOver) {
+    context.fillStyle = 'black';
+    context.font = '80px Helvetica';
+    context.fillText('Game over', 150, 200);
+    setTimeout(() => window.location.reload(), 1500);
+  } else {
+    requestAnimationFrame(animate);
+  }
 }
 
 window.addEventListener('load', () => {
-  animate(enemyLastTime);
+  PAGE_IS_LOAD = true;
 });
 
 window.addEventListener('keydown', (evt) => {
   if (evt.code === 'Space') {
     window.location.reload();
   }
+});
+
+startButton.addEventListener('click', () => {
+  if (!PAGE_IS_LOAD) return;
+  mainTitle.classList.add('hide');
+  description.classList.add('hide');
+  startButton.classList.add('hide');
+  canvas.classList.remove('hide');
+  animate(enemyLastTime);
 });
