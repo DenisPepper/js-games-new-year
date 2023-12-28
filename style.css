@@ -82,6 +82,10 @@ a.start-button {
   font-size: 1.3rem;
 }
 
+.game-hero--target {
+  color: deeppink;
+}
+
 .description-actions {
   font-size: x-small;
   text-align: initial;
