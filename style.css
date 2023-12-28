@@ -12,7 +12,6 @@ h1 {
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   font-size: 30px;
   color: darkolivegreen;
-  transform: rotate(2%);
   font-weight: 700;
   text-transform: lowercase;
 }
@@ -41,7 +40,7 @@ h1 {
   left: 8%;
 }
 
-@media only screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
   /* for 10 inches tablet screens */
   body > * {
     display: none;
@@ -53,7 +52,7 @@ h1 {
     display: block;
     text-align: center;
     font-size: 3rem;
-    background: rgba(255, 255, 0, 0.9); /* Semi-transparent yellow */
+    background: rgba(68, 224, 198, 0.9); /* Semi-transparent yellow */
     position: absolute;
     top: 0;
     left: 0;
