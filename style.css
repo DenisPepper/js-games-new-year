@@ -151,3 +151,9 @@ a.start-button {
     width: 30%;
   }
 }
+
+@media screen and (min-width: 900px) {
+  body {
+    padding: 0 32% 0;
+  }
+}
