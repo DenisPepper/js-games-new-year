@@ -119,11 +119,12 @@ a.start-button {
 
 @media screen and (min-width: 700px) {
   body {
+    padding: 0 26% 0;
     height: 100vh;
   }
 
   .start-button {
-    max-width: 30%;
+    max-width: 800px;
   }
 
   .player-success {
