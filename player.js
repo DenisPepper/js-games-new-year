@@ -5,7 +5,7 @@ export class Player {
     this.playgroundHeight = playgroundHeight;
     this.width = 128;
     this.height = 128;
-    this.x = 0;
+    this.x = 50;
     this.y = 0;
     this.frameX = 0;
     this.frameY = 0;
