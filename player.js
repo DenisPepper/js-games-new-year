@@ -45,7 +45,10 @@ export class Player {
     });
 
     this.x += this.speed;
-    if (actions.keys.has('ArrowUp') && this.onGround()) {
+    if (
+      (actions.keys.has('ArrowUp') || actions.keys.has('Jump')) &&
+      this.onGround()
+    ) {
       this.velocityY += 22;
     } else if (actions.keys.has('ArrowRight')) {
       this.speed = 5;
