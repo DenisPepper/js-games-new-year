@@ -30,7 +30,11 @@ body {
 
 .year {
   color: goldenrod;
-  font-size: 6rem;
+  font-size: 2rem;
+}
+
+.year span {
+  font-size: 5rem;
 }
 
 .description {
