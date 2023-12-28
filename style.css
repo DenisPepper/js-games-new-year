@@ -22,9 +22,27 @@ body {
   background-size: cover;
 }
 
-.main-title {
+.main-title,
+.title-success {
   color: aliceblue;
   padding: 10px;
+  text-align: center;
+}
+
+.title-success {
+  color: goldenrod;
+  font-size: 4rem;
+}
+
+.player-success {
+  width: 80%;
+  animation: spin 4s linear infinite;
+  transform: rotate(5deg);
+}
+
+a.start-button {
+  text-decoration: none;
+  color: inherit;
   text-align: center;
 }
 
@@ -78,6 +96,7 @@ body {
   border-radius: 20px;
   border: none;
   background-color: goldenrod;
+  cursor: pointer;
 }
 
 .canvas {
@@ -101,5 +120,9 @@ body {
 
   .start-button {
     max-width: 30%;
+  }
+
+  .player-success {
+    width: 30%;
   }
 }

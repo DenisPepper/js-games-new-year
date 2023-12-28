@@ -52,6 +52,10 @@ function addEnemy(enemyDeltaTime) {
   });
 }
 
+function showHappyEnd() {
+  document.location.href = '/success.html';
+}
+
 function animate(timeStamp) {
   const enemyDeltaTime = timeStamp - enemyLastTime;
   enemyLastTime = timeStamp;
@@ -67,6 +71,8 @@ function animate(timeStamp) {
   drawScore();
 
   addEnemy(enemyDeltaTime);
+
+  if (score === 5) return showHappyEnd();
 
   if (player.gameOver) {
     context.fillStyle = 'black';
