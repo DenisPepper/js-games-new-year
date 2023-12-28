@@ -133,6 +133,10 @@ a.start-button {
   transform: rotate(25deg);
 }
 
+.player {
+  position: absolute;
+}
+
 @media screen and (min-width: 700px) {
   body {
     padding: 0 28% 0;
