@@ -30,33 +30,3 @@ h1 {
 .enemy-image {
   display: none;
 }
-
-.main-title {
-  margin: 0;
-  width: 80%;
-  position: absolute;
-  z-index: 10;
-  top: 16%;
-  left: 8%;
-}
-
-@media screen and (max-width: 900px) {
-  /* for 10 inches tablet screens */
-  body > * {
-    display: none;
-  }
-
-  body::before {
-    content: 'перейдите на устройство с шириной экрана 900 px';
-    font-weight: bold;
-    display: block;
-    text-align: center;
-    font-size: 3rem;
-    background: rgba(68, 224, 198, 0.9); /* Semi-transparent yellow */
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 99;
-  }
-}

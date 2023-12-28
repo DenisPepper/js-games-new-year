@@ -5,8 +5,8 @@ import { Player } from './player.js';
 import { PLAYGROUND_WIDTH, PLAYGROUND_HEIGHT } from './settings.js';
 
 const canvas = document.querySelector('.canvas');
-canvas.width = PLAYGROUND_WIDTH;
-canvas.height = PLAYGROUND_HEIGHT;
+canvas.width = screen.width * 0.8;
+canvas.height = screen.height * 0.8;
 const context = canvas.getContext('2d');
 
 const playerImage = document.querySelector('.player-image');
