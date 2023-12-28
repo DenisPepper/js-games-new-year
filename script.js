@@ -4,6 +4,7 @@ import { Enemy } from './enemy.js';
 import { Player } from './player.js';
 import { PLAYGROUND_WIDTH, PLAYGROUND_HEIGHT } from './settings.js';
 
+const TOTAL = 20;
 let PAGE_IS_LOAD = false;
 const canvas = document.querySelector('.canvas');
 canvas.width = PLAYGROUND_WIDTH;
@@ -32,7 +33,7 @@ let score = 0;
 function drawScore() {
   context.fillStyle = 'black';
   context.font = '40px Helvetica';
-  context.fillText(`очки: ${score}`, 20, 50);
+  context.fillText(`сугробы: ${score} из ${TOTAL}`, 20, 50);
 }
 
 function addEnemy(enemyDeltaTime) {
@@ -72,7 +73,7 @@ function animate(timeStamp) {
 
   addEnemy(enemyDeltaTime);
 
-  if (score === 5) return showHappyEnd();
+  if (score === TOTAL) return showHappyEnd();
 
   if (player.gameOver) {
     context.fillStyle = 'black';
