@@ -12,7 +12,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 5px;
 }
 
 .with-background {
@@ -26,6 +26,11 @@ body {
   color: aliceblue;
   padding: 10px;
   text-align: center;
+}
+
+.year {
+  color: goldenrod;
+  font-size: 4rem;
 }
 
 .description {
