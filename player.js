@@ -17,8 +17,6 @@ export class Player {
   }
 
   draw(context) {
-    //context.fillStyle = 'white';
-    //context.fillRect(this.x, this.y, this.width, this.height);
     context.drawImage(
       this.image,
       this.frameX * this.width,
@@ -30,17 +28,6 @@ export class Player {
       this.width,
       this.height
     );
-
-    /* context.strokeStyle = 'black';
-    context.beginPath();
-    context.arc(
-      this.x + this.width / 2,
-      this.y + this.height / 2,
-      this.width / 2,
-      0,
-      360
-    );
-    context.stroke(); */
   }
 
   toStart() {
