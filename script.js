@@ -28,7 +28,7 @@ let score = 0;
 function drawScore() {
   context.fillStyle = 'black';
   context.font = '40px Helvetica';
-  context.fillText(`Очки: ${score}`, 20, 50);
+  context.fillText(`очки: ${score}`, 20, 50);
 }
 
 function addEnemy(enemyDeltaTime) {
@@ -69,4 +69,10 @@ function animate(timeStamp) {
 
 window.addEventListener('load', () => {
   animate(enemyLastTime);
+});
+
+window.addEventListener('keydown', (evt) => {
+  if (evt.code === 'Space') {
+    window.location.reload();
+  }
 });

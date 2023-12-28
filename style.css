@@ -2,6 +2,21 @@ body {
   background-color: black;
 }
 
+h1 {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  color: darkolivegreen;
+  transform: rotate(2%);
+  font-weight: 700;
+  text-transform: lowercase;
+}
+
 .canvas {
   border: 5px solid white;
   background-color: cornflowerblue;
@@ -19,9 +34,9 @@ body {
 
 .main-title {
   margin: 0;
-  width: 92%;
+  width: 80%;
   position: absolute;
   z-index: 10;
   top: 16%;
-  left: 3%;
+  left: 8%;
 }

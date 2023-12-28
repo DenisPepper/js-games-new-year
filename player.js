@@ -31,7 +31,7 @@ export class Player {
       this.height
     );
 
-    context.strokeStyle = 'black';
+    /* context.strokeStyle = 'black';
     context.beginPath();
     context.arc(
       this.x + this.width / 2,
@@ -40,7 +40,7 @@ export class Player {
       0,
       360
     );
-    context.stroke();
+    context.stroke(); */
   }
 
   toStart() {
@@ -52,7 +52,7 @@ export class Player {
       const dx = enemy.x + enemy.width / 2 - (this.x + this.width / 2);
       const dy = enemy.y + enemy.height / 2 - (this.y + this.height / 2);
       const distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < enemy.width / 2 + this.width / 2.5) {
+      if (distance < enemy.width / 2 + this.width / 2.6) {
         this.gameOver = true;
       }
     });
