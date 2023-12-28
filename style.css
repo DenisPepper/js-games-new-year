@@ -135,6 +135,7 @@ a.start-button {
 }
 
 .player {
+margin-top: -30px;
 }
 
 @media screen and (min-width: 700px) {
