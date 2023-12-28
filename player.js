@@ -3,8 +3,8 @@ export class Player {
     this.image = image;
     this.playgroundWidth = playgroundWidth;
     this.playgroundHeight = playgroundHeight;
-    this.width = 112;
-    this.height = 105;
+    this.width = 128;
+    this.height = 128;
     this.x = 0;
     this.y = 0;
     this.frameX = 0;
@@ -52,14 +52,14 @@ export class Player {
       const dx = enemy.x + enemy.width / 2 - (this.x + this.width / 2);
       const dy = enemy.y + enemy.height / 2 - (this.y + this.height / 2);
       const distance = Math.sqrt(dx * dx + dy * dy);
-      if (distance < enemy.width / 2 + this.width / 2) {
+      if (distance < enemy.width / 2 + this.width / 2.5) {
         this.gameOver = true;
       }
     });
 
     this.x += this.speed;
     if (actions.keys.has('ArrowUp') && this.onGround()) {
-      this.velocityY += 30;
+      this.velocityY += 22;
     } else if (actions.keys.has('ArrowRight')) {
       this.speed = 5;
     } else if (actions.keys.has('ArrowLeft')) {

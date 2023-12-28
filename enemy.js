@@ -3,8 +3,8 @@ export class Enemy {
     this.image = image;
     this.playgroundWidth = playgroundWidth;
     this.playgroundHeight = playgroundHeight;
-    this.width = 150;
-    this.height = 150;
+    this.width = 145;
+    this.height = 145;
     this.x = this.playgroundWidth;
     this.y = this.playgroundHeight - this.height;
     this.frameX = 0;
@@ -29,7 +29,7 @@ export class Enemy {
       this.height
     );
     
-    context.strokeStyle = 'black';
+    /* context.strokeStyle = 'black';
     context.beginPath();
     context.arc(
       this.x + this.width / 2,
@@ -38,7 +38,7 @@ export class Enemy {
       0,
       360
     );
-    context.stroke();
+    context.stroke(); */
   }
 
   update(time) {
