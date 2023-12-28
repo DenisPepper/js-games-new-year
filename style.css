@@ -41,7 +41,11 @@ body {
   color: aliceblue;
   padding: 10px;
   text-align: center;
+}
+
+.game-hero {
   color: greenyellow;
+  font-size: 1.3rem;
 }
 
 .description-actions {
