@@ -71,7 +71,7 @@ function animate(timeStamp) {
   if (player.gameOver) {
     context.fillStyle = 'black';
     context.font = '80px Helvetica';
-    context.fillText('Game over', 150, 200);
+    context.fillText('GAME OVER', 120, 200);
     setTimeout(() => window.location.reload(), 1500);
   } else {
     requestAnimationFrame(animate);
