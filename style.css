@@ -2,23 +2,9 @@ body {
   background-color: black;
 }
 
-h1 {
-  position: absolute;
-  top: 34%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 2;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 30px;
-  color: darkolivegreen;
-  font-weight: 700;
-  text-transform: lowercase;
-}
-
 .canvas {
+  max-width: 100%;
   border: 5px solid white;
-  background-color: cornflowerblue;
   position: absolute;
   top: 50%;
   left: 50%;
