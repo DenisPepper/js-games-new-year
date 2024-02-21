@@ -4,7 +4,7 @@ import { Enemy } from './enemy.js';
 import { Player } from './player.js';
 import { PLAYGROUND_WIDTH, PLAYGROUND_HEIGHT } from './settings.js';
 
-const TOTAL = 40;
+const TOTAL =localStorage.getItem('enemyCount');;
 let PAGE_IS_LOAD = false;
 const canvas = document.querySelector('.canvas');
 canvas.width = PLAYGROUND_WIDTH;
@@ -55,6 +55,7 @@ function addEnemy(enemyDeltaTime) {
 }
 
 function showHappyEnd() {
+  localStorage.removeItem('enemyCount');
   document.location.href = '/success.html';
 }
 
@@ -80,6 +81,7 @@ function animate(timeStamp) {
     context.fillStyle = 'black';
     context.font = '80px Helvetica';
     context.fillText('GAME OVER', 120, 200);
+    localStorage.removeItem('enemyCount');
     setTimeout(() => window.location.reload(), 1500);
   } else {
     requestAnimationFrame(animate);
