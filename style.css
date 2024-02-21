@@ -30,6 +30,13 @@ body {
   text-align: center;
 }
 
+.enemy-count>input {
+  color: green;
+  
+  padding: 6px;
+  text-align: center;
+}
+
 .title-success {
   color: goldenrod;
   font-size: 4rem;
