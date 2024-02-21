@@ -23,7 +23,8 @@ body {
 }
 
 .main-title,
-.title-success {
+.title-success,
+.enemy-count {
   color: aliceblue;
   padding: 10px;
   text-align: center;
