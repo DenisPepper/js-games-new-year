@@ -1,6 +1,6 @@
 const MAX_ENEMY_COUNT = 100;
 const MIN_ENEMY_COUNT = 20;
-const enemyCountInput = document.querySelector('.enemy-count-input');
+const enemyCountInput = document.querySelector('.enemy-count-input').value || 20;
 localStorage.setItem('enemyCount', MIN_ENEMY_COUNT);
 
 if (enemyCountInput) {
@@ -10,6 +10,6 @@ if (enemyCountInput) {
     } else if (enemyCountInput.value < MIN_ENEMY_COUNT) {
       enemyCountInput.value = MIN_ENEMY_COUNT;
     }
-    localStorage.setItem('enemyCount', enemyCountInput.value);
+    localStorage.setItem('enemyCount', enemyCountInput);
   });
 }
