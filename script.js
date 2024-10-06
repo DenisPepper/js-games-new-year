@@ -4,7 +4,7 @@ import { Enemy } from './enemy.js';
 import { Player } from './player.js';
 import { PLAYGROUND_WIDTH, PLAYGROUND_HEIGHT } from './settings.js';
 
-const TOTAL =localStorage.getItem('enemyCount');;
+const TOTAL = localStorage.getItem('enemyCount') || 15;
 let PAGE_IS_LOAD = false;
 const canvas = document.querySelector('.canvas');
 canvas.width = PLAYGROUND_WIDTH;
