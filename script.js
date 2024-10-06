@@ -56,7 +56,7 @@ function addEnemy(enemyDeltaTime) {
 
 function showHappyEnd() {
   localStorage.removeItem('enemyCount');
-  document.location.href = '/success.html';
+  document.location.replace('/success.html');
 }
 
 function animate(timeStamp) {
